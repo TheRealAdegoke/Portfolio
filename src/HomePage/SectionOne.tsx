@@ -1,8 +1,4 @@
 
-
-
-
-
 const SectionOne = () => {
   
 
