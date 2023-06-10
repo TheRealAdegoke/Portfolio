@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: rgb(28, 28, 28);
+    color: white;
+}
+
+.popOver {
+    background-color: #555;
+    padding: 5px;
+}
+
+.popOver > h1 {
+    font-size: 12px;
+}
+
+/* Popup arrow */
+.popOver > h1::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    right: -10px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #555;
+}
