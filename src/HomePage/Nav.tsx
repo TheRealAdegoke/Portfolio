@@ -108,20 +108,21 @@ const divRef = useRef<any>(null);
         <div
           className={`${
             closeNav
-              ? "left-[0] large:left-[27%]"
-              : "left-[100%] large:left-[100%]"
+              ? "left-[0%] large:left-[27%]"
+              : "left-[100%]"
           } bg-[rgb(25,25,25)] h-[100vh] fixed w-[100%] top-0 large:w-[73%] transition-all duration-[1s] ease-in-out`}
+          ref={divRef}
         >
           <div
-            className="bg-inherit pt-[20px] pr-[5px] cursor-pointer"
+            className="bg-inherit mt-[20px] pr-[5px] cursor-pointer"
             onClick={() => {
               handleCloseNav2();
             }}
           >
-            <i className="fa-solid fa-xmark bg-inherit float-right text-[25px]"></i>
+            <i className="fa-solid fa-xmark bg-inherit float-right text-[35px]"></i>
           </div>
 
-          <div className="pt-[120px] pl-[10%] large:pl-[15%]" ref={divRef}>
+          <div className="pt-[120px] pl-[10%] large:pl-[15%]" >
             <h1 className="text-[40px] font-[400] font-karla">Configuration</h1>
 
             <p className="py-[50px] font-karla text-[18px] font-[600] uppercase">
