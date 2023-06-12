@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import SecondNav from "./SecondNav";
+import BodyImageConfig from "./BodyImageConfig";
 
 
 interface ColorPickerProps {
@@ -332,7 +333,10 @@ const divRef = useRef<any>(null);
                   ></div>
                 </div>
               </div>
+
             </div>
+
+            <BodyImageConfig close={handleCloseNav}/>
           </div>
         </div>
       </nav>
