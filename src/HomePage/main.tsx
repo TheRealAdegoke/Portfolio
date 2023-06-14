@@ -17,9 +17,11 @@ const Main = () => {
       <section className="select-none">
         <Nav onColorChange={handleColorChange} />
         <Aside selectedColor={selectedColor} />
-        <SectionOne />
-        <SectionTwo />
-        <SectionThree />
+        <div className="large:ml-[28%] large:py-[80px] large:w-[60%]">
+          <SectionOne selectedColor={selectedColor} />
+          <SectionTwo selectedColor={selectedColor} />
+          <SectionThree selectedColor={selectedColor} />
+        </div>
       </section>
     </>
   );

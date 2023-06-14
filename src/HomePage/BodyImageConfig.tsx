@@ -92,7 +92,7 @@ const BodyImageConfig: React.FC<CloseComponentProps> = ({close}) => {
 
   return (
     <div className="mt-[50px]">
-      <h1 className=" font-[poppins]">THREE DIMENSIONAL SHAPES</h1>
+      <h1 className="text-[25px] font-[poppins]">Background Configuration</h1>
 
       <div className="mt-[20px] flex flex-wrap gap-[20px] w-[300px]">
         <p
