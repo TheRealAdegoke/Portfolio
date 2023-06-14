@@ -27,3 +27,6 @@ body {
     border-style: solid;
     border-color: transparent transparent transparent #555;
 }
+html{
+    scroll-behavior: smooth;
+}
