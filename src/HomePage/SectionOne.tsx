@@ -1,5 +1,6 @@
 import { useState } from "react";
 import RoundText from "../assets/round-text.png"
+import { Link } from "react-scroll";
 
 interface TextColorProps {
   selectedColor: string;
@@ -46,11 +47,13 @@ const SectionOne: React.FC<TextColorProps> = ({ selectedColor }) => {
       <div
         className={`relative tablet:right-[10%] rounded-full border-[1px] border-[rgba(255,255,255,0.3)] inline-block w-[150px] small:ml-[20px] cursor-pointer large:float-right tablet:float-right`}
       >
-        <img
-          src={RoundText}
-          alt=""
-          className="w-[100%] block mx-auto py-[10px] px-[10px] animate-spin-slow"
-        />
+        <Link to="SectionSix" smooth={true} duration={500} offset={-50}>
+          <img
+            src={RoundText}
+            alt=""
+            className="w-[100%] block mx-auto py-[10px] px-[10px] animate-spin-slow"
+          />
+        </Link>
 
         <div className="absolute top-[40%] right-[43%]">
           <i className="fa-solid fa-arrow-down-long text-[30px]"></i>
