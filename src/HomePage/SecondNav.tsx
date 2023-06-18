@@ -81,7 +81,7 @@ const SecondNav: React.FC<TextComponentProps> = ({ selectedColor }) => {
         <div
           className={`${
             closeNav ? "left-[22%]" : "left-[100%]"
-          } bg-[rgb(25,25,25)] fixed top-0 right-0 h-[100vh] w-[78%] max-w-[400px] transition-all duration-[1s] ease-in-out`}
+          } bg-[rgb(25,25,25)] fixed top-0 right-0 h-[100%] w-[78%] max-w-[700px] transition-all duration-[1s] ease-in-out`}
           ref={divRef}
         >
           <div className="smaller:mt-[20px] mt-[60px] smaller:ml-[8vw] ml-[80px]">

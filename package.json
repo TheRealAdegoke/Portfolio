@@ -13,12 +13,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
+    "react-scroll": "^1.8.9",
     "react-simple-typewriter": "^5.0.1",
     "swiper": "^9.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
+    "@types/react-scroll": "^1.8.7",
     "@types/swiper": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",

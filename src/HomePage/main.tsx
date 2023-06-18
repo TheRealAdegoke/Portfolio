@@ -4,6 +4,9 @@ import SectionTwo from "./SectionTwo";
 import SectionThree from "./SectionThree";
 import Aside from "./Aside";
 import { useState } from "react";
+import SectionFour from "./SectionFour";
+import SectionFive from "./SectionFive";
+import SectionSix from "./SectionSix";
 
 const Main = () => {
   const [selectedColor, setSelectedColor] = useState<string>("")
@@ -21,6 +24,9 @@ const Main = () => {
           <SectionOne selectedColor={selectedColor} />
           <SectionTwo selectedColor={selectedColor} />
           <SectionThree selectedColor={selectedColor} />
+          <SectionFour selectedColor={selectedColor} />
+          <SectionFive selectedColor={selectedColor} />
+          <SectionSix selectedColor={selectedColor} />
         </div>
       </section>
     </>

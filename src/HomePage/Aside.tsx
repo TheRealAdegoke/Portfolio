@@ -1,5 +1,6 @@
 import action from "../assets/action-truman.gif";
 import { useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 interface TextComponentProps {
   selectedColor: string;
@@ -196,18 +197,20 @@ const handleMouseLeave = (id: any) => {
 
       <div className="w-[50px] h-[300px] border-[1px] border-[rgba(255,255,255,0.3)] fixed small:hidden right-[6%] top-[25%] rounded-t-[35px] rounded-b-[35px] flex flex-col items-center gap-[17px] py-[20px] text-[rgba(255,255,255,0.5)] cursor-pointer">
         <div className="relative">
-          <i
-            className="fa-solid fa-house hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out"
-            style={{
-              color: hovered[5].isOpen ? selectedColor : "",
-            }}
-            onMouseOver={() => {
-              handleHover(hovered[5].id);
-            }}
-            onMouseLeave={() => {
-              handleMouseLeave(hovered[5].id);
-            }}
-          ></i>
+          <Link to="SectionOne" smooth={true} duration={500} offset={-70}>
+            <i
+              className="fa-solid fa-house hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out"
+              style={{
+                color: hovered[5].isOpen ? selectedColor : "",
+              }}
+              onMouseOver={() => {
+                handleHover(hovered[5].id);
+              }}
+              onMouseLeave={() => {
+                handleMouseLeave(hovered[5].id);
+              }}
+            ></i>
+          </Link>
 
           <div
             className={`${
@@ -219,18 +222,20 @@ const handleMouseLeave = (id: any) => {
         </div>
 
         <div className="relative">
-          <i
-            className="fa-regular fa-user hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out"
-            style={{
-              color: hovered[6].isOpen ? selectedColor : "",
-            }}
-            onMouseOver={() => {
-              handleHover(hovered[6].id);
-            }}
-            onMouseLeave={() => {
-              handleMouseLeave(hovered[6].id);
-            }}
-          ></i>
+          <Link to="SectionTwo" smooth={true} duration={500} offset={-150}>
+            <i
+              className="fa-regular fa-user hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out"
+              style={{
+                color: hovered[6].isOpen ? selectedColor : "",
+              }}
+              onMouseOver={() => {
+                handleHover(hovered[6].id);
+              }}
+              onMouseLeave={() => {
+                handleMouseLeave(hovered[6].id);
+              }}
+            ></i>
+          </Link>
 
           <div
             className={`${
@@ -242,18 +247,20 @@ const handleMouseLeave = (id: any) => {
         </div>
 
         <div className="relative">
-          <i
-            className="fa-solid fa-briefcase hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out"
-            style={{
-              color: hovered[7].isOpen ? selectedColor : "",
-            }}
-            onMouseOver={() => {
-              handleHover(hovered[7].id);
-            }}
-            onMouseLeave={() => {
-              handleMouseLeave(hovered[7].id);
-            }}
-          ></i>
+          <Link to="SectionThree" smooth={true} duration={500} offset={-50}>
+            <i
+              className="fa-solid fa-briefcase hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out"
+              style={{
+                color: hovered[7].isOpen ? selectedColor : "",
+              }}
+              onMouseOver={() => {
+                handleHover(hovered[7].id);
+              }}
+              onMouseLeave={() => {
+                handleMouseLeave(hovered[7].id);
+              }}
+            ></i>
+          </Link>
 
           <div
             className={`${

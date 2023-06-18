@@ -111,7 +111,7 @@ const divRef = useRef<any>(null);
             closeNav
               ? "left-[0%] large:left-[27%]"
               : "left-[100%]"
-          } bg-[rgb(25,25,25)] h-[100vh] fixed w-[100%] top-0 large:w-[73%] transition-all duration-[1s] ease-in-out`}
+          } bg-[rgb(25,25,25)] h-[100%] fixed w-[100%] top-0 large:w-[73%] transition-all duration-[1s] ease-in-out smaller:overflow-y-scroll`}
           ref={divRef}
         >
           <div
