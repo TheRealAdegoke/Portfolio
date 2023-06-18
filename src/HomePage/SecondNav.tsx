@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-scroll";
 
 interface TextComponentProps {
   selectedColor: string;
@@ -29,6 +30,7 @@ const SecondNav: React.FC<TextComponentProps> = ({ selectedColor }) => {
     if (index !== -1) {
       newShowBorder[index].isOpen = true;
       setHovered(newShowBorder);
+      
     }
   };
 
@@ -54,34 +56,35 @@ const SecondNav: React.FC<TextComponentProps> = ({ selectedColor }) => {
     };
   }, []);
 
+
   
 
   return (
     <nav>
-      <div
-        className="mr-[20px] cursor-pointer large:hidden"
-        onClick={() => {
-          setCloseNav(true);
-        }}
-      >
-        <i
-          className="fa-solid fa-bars-progress border-[1px] border-[rgba(255,255,255,0.3)] rounded-full px-[15px] py-[15px] text-[20px] bg-[rgb(31,31,31)] hover:border-[rgb(40,233,140)] hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out"
-          style={{
-            color: hovered[11].isOpen ? selectedColor : "",
-            borderColor: hovered[11].isOpen ? selectedColor : "",
-          }}
-          onMouseOver={() => {
-            handleHover(hovered[11].id);
-          }}
-          onMouseLeave={() => {
-            handleMouseLeave(hovered[11].id);
-          }}
-        ></i>
+      <div>
+        <div className="mr-[20px] cursor-pointer large:hidden">
+          <i
+            className="fa-solid fa-bars-progress border-[1px] border-[rgba(255,255,255,0.3)] rounded-full px-[15px] py-[15px] text-[20px] bg-[rgb(31,31,31)] hover:border-[rgb(40,233,140)] hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out"
+            style={{
+              color: hovered[11].isOpen ? selectedColor : "",
+              borderColor: hovered[11].isOpen ? selectedColor : "",
+            }}
+            onMouseOver={() => {
+              handleHover(hovered[11].id);
+            }}
+            onMouseLeave={() => {
+              handleMouseLeave(hovered[11].id);
+            }}
+            onClick={() => {
+              setCloseNav(true);
+            }}
+          ></i>
+        </div>
 
         <div
           className={`${
-            closeNav ? "left-[22%]" : "left-[100%]"
-          } bg-[rgb(25,25,25)] fixed top-0 right-0 h-[100%] w-[78%] max-w-[700px] transition-all duration-[1s] ease-in-out`}
+            closeNav ? "left-[25%]" : "left-[100%]"
+          } bg-[rgb(25,25,25)] fixed top-0 right-0 h-[100%]  transition-all duration-[1s] ease-in-out large:hidden`}
           ref={divRef}
         >
           <div className="smaller:mt-[20px] mt-[60px] smaller:ml-[8vw] ml-[80px]">
@@ -89,195 +92,230 @@ const SecondNav: React.FC<TextComponentProps> = ({ selectedColor }) => {
               Menu
             </h1>
 
-            <div className="flex flex-col gap-[25px] smaller:mb-[10px] mb-[80px]">
-              <div
-                className="flex items-center gap-[10px] text-[15px]"
-                onMouseOver={() => {
-                  handleHover(hovered[0].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[0].id);
-                }}
-              >
-                <i
-                  className={`${
-                    hovered[0].isOpen ? "text-[rgb(40,233,140)]" : ""
-                  }  fa-solid fa-house hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out text-[rgba(255,255,255,0.3)]`}
-                  style={{
-                    color: hovered[0].isOpen ? selectedColor : "",
+            <div className="flex flex-col gap-[25px] smaller:mb-[10px] mb-[80px] cursor-pointer">
+              <Link to="SectionOne" smooth={true} duration={500} offset={-50}>
+                <div
+                  className="flex items-center gap-[10px] text-[15px]"
+                  onMouseOver={() => {
+                    handleHover(hovered[0].id);
                   }}
-                ></i>
-                <p
-                  className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
-                  style={{
-                    color: hovered[0].isOpen ? "white" : "",
+                  onMouseLeave={() => {
+                    handleMouseLeave(hovered[0].id);
+                  }}
+                  onClick={() => {
+                    setCloseNav(false);
                   }}
                 >
-                  Home
-                </p>
-              </div>
+                  <i
+                    className={`${
+                      hovered[0].isOpen ? "text-[rgb(40,233,140)]" : ""
+                    }  fa-solid fa-house hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out text-[rgba(255,255,255,0.3)]`}
+                    style={{
+                      color: hovered[0].isOpen ? selectedColor : "",
+                    }}
+                  ></i>
+                  <p
+                    className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
+                    style={{
+                      color: hovered[0].isOpen ? "white" : "",
+                    }}
+                  >
+                    Home
+                  </p>
+                </div>
+              </Link>
 
-              <div
-                className="flex items-center gap-[10px] text-[15px]"
-                onMouseOver={() => {
-                  handleHover(hovered[1].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[1].id);
-                }}
-              >
-                <i
-                  className={`${
-                    hovered[1].isOpen ? "text-[rgb(40,233,140)]" : ""
-                  } fa-regular fa-user hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out text-[rgba(255,255,255,0.3)]`}
-                  style={{
-                    color: hovered[1].isOpen ? selectedColor : "",
+              <Link to="SectionTwo" smooth={true} duration={500} offset={-50}>
+                <div
+                  className="flex items-center gap-[10px] text-[15px]"
+                  onMouseOver={() => {
+                    handleHover(hovered[1].id);
                   }}
-                ></i>
-                <p
-                  className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
-                  style={{
-                    color: hovered[1].isOpen ? "white" : "",
+                  onMouseLeave={() => {
+                    handleMouseLeave(hovered[1].id);
+                  }}
+                  onClick={() => {
+                    setCloseNav(false);
                   }}
                 >
-                  About
-                </p>
-              </div>
+                  <i
+                    className={`${
+                      hovered[1].isOpen ? "text-[rgb(40,233,140)]" : ""
+                    } fa-regular fa-user hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out text-[rgba(255,255,255,0.3)]`}
+                    style={{
+                      color: hovered[1].isOpen ? selectedColor : "",
+                    }}
+                  ></i>
+                  <p
+                    className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
+                    style={{
+                      color: hovered[1].isOpen ? "white" : "",
+                    }}
+                  >
+                    About
+                  </p>
+                </div>
+              </Link>
 
-              <div
-                className="flex items-center gap-[10px] text-[15px]"
-                onMouseOver={() => {
-                  handleHover(hovered[2].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[2].id);
-                }}
-              >
-                <i
-                  className={`${
-                    hovered[2].isOpen ? "text-[rgb(40,233,140)]" : ""
-                  } fa-solid fa-briefcase hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out text-[rgba(255,255,255,0.3)]`}
-                  style={{
-                    color: hovered[2].isOpen ? selectedColor : "",
+              <Link to="SectionThree" smooth={true} duration={500} offset={-50}>
+                <div
+                  className="flex items-center gap-[10px] text-[15px]"
+                  onMouseOver={() => {
+                    handleHover(hovered[2].id);
                   }}
-                ></i>
-                <p
-                  className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
-                  style={{
-                    color: hovered[2].isOpen ? "white" : "",
+                  onMouseLeave={() => {
+                    handleMouseLeave(hovered[2].id);
+                  }}
+                  onClick={() => {
+                    setCloseNav(false);
                   }}
                 >
-                  Resume
-                </p>
-              </div>
+                  <i
+                    className={`${
+                      hovered[2].isOpen ? "text-[rgb(40,233,140)]" : ""
+                    } fa-solid fa-briefcase hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out text-[rgba(255,255,255,0.3)]`}
+                    style={{
+                      color: hovered[2].isOpen ? selectedColor : "",
+                    }}
+                  ></i>
+                  <p
+                    className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
+                    style={{
+                      color: hovered[2].isOpen ? "white" : "",
+                    }}
+                  >
+                    Resume
+                  </p>
+                </div>
+              </Link>
 
-              <div
-                className="flex items-center gap-[10px] text-[15px] text-[rgba(255,255,255,0.3)]"
-                onMouseOver={() => {
-                  handleHover(hovered[3].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[3].id);
-                }}
-              >
-                <i
-                  className={`${
-                    hovered[3].isOpen ? "text-[rgb(40,233,140)]" : ""
-                  } fa-solid fa-bars-staggered hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out text-[rgba(255,255,255,0.3)]`}
-                  style={{
-                    color: hovered[3].isOpen ? selectedColor : "",
+              <Link to="SectionFour" smooth={true} duration={500} offset={-50}>
+                <div
+                  className="flex items-center gap-[10px] text-[15px] text-[rgba(255,255,255,0.3)]"
+                  onMouseOver={() => {
+                    handleHover(hovered[3].id);
                   }}
-                ></i>
-                <p
-                  className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
-                  style={{
-                    color: hovered[3].isOpen ? "white" : "",
+                  onMouseLeave={() => {
+                    handleMouseLeave(hovered[3].id);
+                  }}
+                  onClick={() => {
+                    setCloseNav(false);
                   }}
                 >
-                  Services
-                </p>
-              </div>
+                  <i
+                    className={`${
+                      hovered[3].isOpen ? "text-[rgb(40,233,140)]" : ""
+                    } fa-solid fa-bars-staggered hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out text-[rgba(255,255,255,0.3)]`}
+                    style={{
+                      color: hovered[3].isOpen ? selectedColor : "",
+                    }}
+                  ></i>
+                  <p
+                    className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
+                    style={{
+                      color: hovered[3].isOpen ? "white" : "",
+                    }}
+                  >
+                    Services
+                  </p>
+                </div>
+              </Link>
 
-              <div
-                className="flex items-center gap-[10px] text-[15px]"
-                onMouseOver={() => {
-                  handleHover(hovered[4].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[4].id);
-                }}
-              >
-                <i
-                  className={`${
-                    hovered[4].isOpen ? "text-[rgb(40,233,140)]" : ""
-                  } fa-brands fa-jedi-order hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out text-[rgba(255,255,255,0.3)]`}
-                  style={{
-                    color: hovered[4].isOpen ? selectedColor : "",
+              <Link to="SectionFive" smooth={true} duration={500} offset={-50}>
+                <div
+                  className="flex items-center gap-[10px] text-[15px]"
+                  onMouseOver={() => {
+                    handleHover(hovered[4].id);
                   }}
-                ></i>
-                <p
-                  className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
-                  style={{
-                    color: hovered[4].isOpen ? "white" : "",
+                  onMouseLeave={() => {
+                    handleMouseLeave(hovered[4].id);
+                  }}
+                  onClick={() => {
+                    setCloseNav(false);
                   }}
                 >
-                  Skills
-                </p>
-              </div>
+                  <i
+                    className={`${
+                      hovered[4].isOpen ? "text-[rgb(40,233,140)]" : ""
+                    } fa-brands fa-jedi-order hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out text-[rgba(255,255,255,0.3)]`}
+                    style={{
+                      color: hovered[4].isOpen ? selectedColor : "",
+                    }}
+                  ></i>
+                  <p
+                    className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
+                    style={{
+                      color: hovered[4].isOpen ? "white" : "",
+                    }}
+                  >
+                    Skills
+                  </p>
+                </div>
+              </Link>
 
-              <div
-                className="flex items-center gap-[10px] text-[15px] text-[rgba(255,255,255,0.3)]"
-                onMouseOver={() => {
-                  handleHover(hovered[5].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[5].id);
-                }}
-              >
-                <i
-                  className={`${
-                    hovered[5].isOpen ? "text-[rgb(40,233,140)]" : ""
-                  } fa-solid fa-medal hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out`}
-                  style={{
-                    color: hovered[5].isOpen ? selectedColor : "",
+              <Link to="SectionSix" smooth={true} duration={500} offset={-50}>
+                <div
+                  className="flex items-center gap-[10px] text-[15px] text-[rgba(255,255,255,0.3)]"
+                  onMouseOver={() => {
+                    handleHover(hovered[5].id);
                   }}
-                ></i>
-                <p
-                  className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
-                  style={{
-                    color: hovered[5].isOpen ? "white" : "",
+                  onMouseLeave={() => {
+                    handleMouseLeave(hovered[5].id);
+                  }}
+                  onClick={() => {
+                    setCloseNav(false);
                   }}
                 >
-                  Portfolios
-                </p>
-              </div>
+                  <i
+                    className={`${
+                      hovered[5].isOpen ? "text-[rgb(40,233,140)]" : ""
+                    } fa-solid fa-medal hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out`}
+                    style={{
+                      color: hovered[5].isOpen ? selectedColor : "",
+                    }}
+                  ></i>
+                  <p
+                    className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
+                    style={{
+                      color: hovered[5].isOpen ? "white" : "",
+                    }}
+                  >
+                    Portfolios
+                  </p>
+                </div>
+              </Link>
 
-              <div
-                className="flex items-center gap-[10px] text-[15px]"
-                onMouseOver={() => {
-                  handleHover(hovered[6].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[6].id);
-                }}
-              >
-                <i
-                  className={`${
-                    hovered[6].isOpen ? "text-[rgb(40,233,140)]" : ""
-                  } fa-regular fa-envelope hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out text-[rgba(255,255,255,0.3)]`}
-                  style={{
-                    color: hovered[6].isOpen ? selectedColor : "",
+              <Link to="Contact" smooth={true} duration={500} offset={-50}>
+                <div
+                  className="flex items-center gap-[10px] text-[15px]"
+                  onMouseOver={() => {
+                    handleHover(hovered[6].id);
                   }}
-                ></i>
-                <p
-                  className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
-                  style={{
-                    color: hovered[6].isOpen ? "white" : "",
+                  onMouseLeave={() => {
+                    handleMouseLeave(hovered[6].id);
+                  }}
+                  onClick={() => {
+                    setCloseNav(false);
                   }}
                 >
-                  Contact
-                </p>
-              </div>
+                  <i
+                    className={`${
+                      hovered[6].isOpen ? "text-[rgb(40,233,140)]" : ""
+                    } fa-regular fa-envelope hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out text-[rgba(255,255,255,0.3)]`}
+                    style={{
+                      color: hovered[6].isOpen ? selectedColor : "",
+                    }}
+                  ></i>
+                  <p
+                    className="text-[rgba(255,255,255,0.3)] transition-all duration-[0.5s] ease-in-out"
+                    style={{
+                      color: hovered[6].isOpen ? "white" : "",
+                    }}
+                  >
+                    Contact
+                  </p>
+                </div>
+              </Link>
             </div>
 
             <div>

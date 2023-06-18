@@ -32,7 +32,7 @@ const SectionFour: React.FC<TextColorProps> = ({ selectedColor }) => {
  
 
   return (
-    <section className="small:mt-[150px] small:mb-[80px] large:ml-[80px] mx-auto small:max-w-[800px] large:mt-[200px]">
+    <section className="small:mt-[150px] small:mb-[80px] large:ml-[80px] mx-auto small:max-w-[800px] large:mt-[200px]" id="SectionFour">
       <div className="flex items-center justify-center gap-[10px] rounded-full border-[1px] border-[rgba(255,255,255,0.4)] text-[rgba(255,255,255,0.8)] w-[120px] mb-[40px] ml-[20px]">
         <i className="fa-solid fa-bars-staggered text-[13px]"></i>
         <p className="py-[5px] uppercase font-karla">Services</p>

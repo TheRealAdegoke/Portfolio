@@ -4,7 +4,7 @@ import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
 import react from "../assets/react.png";
-import canva from "../assets/canva.png";
+import tailwind from "../assets/tailwind.webp";
 
 interface TextColorProps {
   selectedColor: string;
@@ -42,7 +42,7 @@ const SectionFive: React.FC<TextColorProps> = ({ selectedColor }) => {
   
 
   return (
-    <section className="small:mt-[150px] small:mb-[80px] large:ml-[80px] mx-auto small:max-w-[800px] large:mt-[200px]">
+    <section className="small:mt-[150px] small:mb-[80px] large:ml-[80px] mx-auto small:max-w-[800px] large:mt-[200px]" id="SectionFive">
       <div className="flex items-center justify-center gap-[10px] rounded-full border-[1px] border-[rgba(255,255,255,0.4)] text-[rgba(255,255,255,0.8)] w-[120px] mb-[40px] ml-[20px]">
         <i className="fa-solid fa-jedi text-[13px]"></i>
         <p className="py-[5px] uppercase font-karla">Skills</p>
@@ -195,10 +195,10 @@ const SectionFive: React.FC<TextColorProps> = ({ selectedColor }) => {
               borderColor: hovered[5].isOpen ? selectedColor : "",
             }}
           >
-            <img src={canva} alt="" className="w-[80px]" />
+            <img src={tailwind} alt="" className="w-[80px]" />
           </div>
 
-          <p className="font-[poppins] uppercase py-[20px]">Canva</p>
+          <p className="font-[poppins] uppercase py-[20px]">Tailwind</p>
         </div>
       </div>
     </section>
