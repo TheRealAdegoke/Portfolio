@@ -191,7 +191,7 @@ const handleMouseLeave = (id: any) => {
           }}
         >
           <i className="fa-regular fa-envelope"></i>
-          <p>Hire me!</p>
+          <p>Contact me!</p>
         </a>
       </div>
 
