@@ -81,7 +81,7 @@ const SectionThree: React.FC<TextColorProps> = ({ selectedColor }) => {
                   color: hovered[0].isOpen ? selectedColor : "",
                 }}
               >
-                2022 - Present
+                2020 - Present
               </p>
               <p className="text-[20px] font-[400]">Web Developer</p>
               <p className="text-[20px] font-[400]">
