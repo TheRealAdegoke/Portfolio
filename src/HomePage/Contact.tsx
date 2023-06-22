@@ -11,6 +11,7 @@ const Contact: React.FC<TextColorProps> = ({ selectedColor }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [phone, setPhone] = useState("");
     const [hovered, setHovered] = useState<any>([
       { id: 1, isOpen: false },
     ]);
@@ -45,6 +46,18 @@ const Contact: React.FC<TextColorProps> = ({ selectedColor }) => {
       setMessage(event.target.value);
     };
 
+    const handlePhoneChange = (event: any) => {
+      const numberRegex = /^[0-9]+$/;
+      const newValue = event.target.value;
+      if (numberRegex.test(newValue) || newValue === "") {
+        setPhone(newValue);
+      }
+    };
+
+    // const handlePhoneChange = (event: any) => {
+    //   setPhone(event.target.value);
+    // };
+
     const sendEmail = (e: any) => {
       e.preventDefault();
       emailjs
@@ -60,6 +73,7 @@ const Contact: React.FC<TextColorProps> = ({ selectedColor }) => {
             setName("");
             setEmail("");
             setMessage("");
+            setPhone("");
           },
           (error) => {
             console.log(error.text);
@@ -68,7 +82,10 @@ const Contact: React.FC<TextColorProps> = ({ selectedColor }) => {
     };
 
   return (
-    <section className="small:mt-[150px] small:mb-[80px] large:ml-[80px] mx-auto small:max-w-[800px] large:mt-[200px]" id="Contact">
+    <section
+      className="small:mt-[150px] small:mb-[80px] large:ml-[80px] mx-auto small:max-w-[800px] large:mt-[200px]"
+      id="Contact"
+    >
       <div className="flex items-center justify-center gap-[10px] rounded-full border-[1px] border-[rgba(255,255,255,0.4)] text-[rgba(255,255,255,0.8)] w-[120px] mb-[40px] ml-[20px]">
         <i className="fa-regular fa-envelope text-[13px]"></i>
         <p className="py-[5px] uppercase font-karla">Contact</p>
@@ -129,12 +146,14 @@ const Contact: React.FC<TextColorProps> = ({ selectedColor }) => {
             </span>
           </label>
           <input
-            type=""
-            name=""
+            type="text"
+            name="user_phone"
             id=""
+            value={phone}
             placeholder="Your Phone Number"
             className="h-[40px] rounded-t-[5px] rounded-b-[5px] border-[2px] border-[white] bg-[rgba(255,255,255)] text-[black] pl-[10px] pb-[5px] text-[20px] outline-[blue]"
             required
+            onChange={handlePhoneChange}
           />
         </div>
 

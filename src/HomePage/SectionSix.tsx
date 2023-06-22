@@ -114,7 +114,7 @@ const SectionSix: React.FC<TextColorProps> = ({ selectedColor }) => {
           </a>
         </div>
 
-        <div className="w-[95%] max-w-[] mx-auto my-[20px]">
+        <div className="w-[95%] max-w-[] mx-auto my-[20px] ">
           <Swiper
             slidesPerView={2}
             spaceBetween={40}
