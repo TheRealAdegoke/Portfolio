@@ -121,7 +121,7 @@ const SectionThree: React.FC<TextColorProps> = ({ selectedColor }) => {
               <div>
                 <p className="text-[20px] font-[400]">B.Sc. Computer Science</p>
                 <p className="text-[rgb(101,101,101)] text-[15px] font-[500]">
-                  National open university of nigeria
+                  National Open University of Nigeria
                 </p>
               </div>
             </div>
