@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { ThreeCircles } from "react-loader-spinner";
 
 interface TextColorProps {
   selectedColor: string;
@@ -12,6 +13,7 @@ const Contact: React.FC<TextColorProps> = ({ selectedColor }) => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [phone, setPhone] = useState("");
+    const [loading, setLoading] = useState(false);
     const [hovered, setHovered] = useState<any>([
       { id: 1, isOpen: false },
     ]);
@@ -54,12 +56,10 @@ const Contact: React.FC<TextColorProps> = ({ selectedColor }) => {
       }
     };
 
-    // const handlePhoneChange = (event: any) => {
-    //   setPhone(event.target.value);
-    // };
 
     const sendEmail = (e: any) => {
       e.preventDefault();
+      setLoading(true); // Set loading to true when the form is submitted
       emailjs
         .sendForm(
           "service_brxbv5c",
@@ -78,7 +78,10 @@ const Contact: React.FC<TextColorProps> = ({ selectedColor }) => {
           (error) => {
             console.log(error.text);
           }
-        );
+        )
+        .finally(() => {
+          setLoading(false); // Reset loading to false when the operation is completed
+        });
     };
 
   return (
@@ -171,12 +174,16 @@ const Contact: React.FC<TextColorProps> = ({ selectedColor }) => {
           type="submit"
           value="Send Message"
           className={`cursor-pointer bg-[rgb(40,233,140)] mt-[20px] w-[80%] max-w-[400px] py-[5px] rounded-[5px] text-center text-[black] text-[23px] font-[Poppins] hover:bg-[transparent] hover:text-[rgb(40,233,140)] hover:border-[rgb(40,233,140)] hover:border-[2px] transition-all duration-[0.5s] ease-in-out block`}
+          disabled={!name || !email || !message || !phone}
           style={{
             backgroundColor: hovered[0].isOpen ? "" : selectedColor,
             borderColor: hovered[0].isOpen
               ? selectedColor
               : "rgba(255,255,255,0.3)",
             color: hovered[0].isOpen ? selectedColor : "",
+            opacity: !name || !email || !message || !phone ? 0.5 : 1,
+            cursor:
+              !name || !email || !message || !phone ? "not-allowed" : "pointer",
           }}
           onMouseOver={() => {
             handleHover(hovered[0].id);
@@ -185,7 +192,24 @@ const Contact: React.FC<TextColorProps> = ({ selectedColor }) => {
             handleMouseLeave(hovered[0].id);
           }}
         >
-          Send Message
+          {loading ? (
+            <div className="w-[30px] mx-auto">
+              <ThreeCircles
+                height="25"
+                width="25"
+                color="rgb(160,210,254)"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+                ariaLabel="three-circles-rotating"
+                outerCircleColor=""
+                innerCircleColor=""
+                middleCircleColor=""
+              />
+            </div>
+          ) : (
+            "send message"
+          )}
         </button>
       </form>
     </section>
