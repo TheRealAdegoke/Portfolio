@@ -81,42 +81,9 @@ const SectionSix: React.FC<TextColorProps> = ({ selectedColor }) => {
       </p>
 
       <div>
-        <div
-          className={`${
-            hovered[0].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
-          } w-[95%] max-w-[] mx-auto my-[20px]`}
-          onMouseOver={() => {
-            handleHover(hovered[0].id);
-          }}
-          onMouseLeave={() => {
-            handleMouseLeave(hovered[0].id);
-          }}
-        >
-          <a
-            href="https://petroutine.netlify.app/"
-            className="block w-[100%]"
-            target="_blank"
-          >
-            <img
-              src={pet}
-              alt=""
-              className="block rounded-t-[20px] rounded-b-[20px] h-[400px]"
-            />
-
-            <p
-              className={`text-[30px] font-karla pl-[10px] py-[10px]`}
-              style={{
-                color: hovered[0].isOpen ? selectedColor : "",
-              }}
-            >
-              Pet Store
-            </p>
-          </a>
-        </div>
-
         <div className="w-[95%] max-w-[] mx-auto my-[20px] ">
           <Swiper
-            slidesPerView={2}
+            slidesPerView={1}
             spaceBetween={40}
             autoplay={{
               delay: 1500,
@@ -162,285 +129,7 @@ const SectionSix: React.FC<TextColorProps> = ({ selectedColor }) => {
                 </a>
               </div>
             </SwiperSlide>
-
-            <SwiperSlide>
-              <div
-                className={`${
-                  hovered[2].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
-                }`}
-                onMouseOver={() => {
-                  handleHover(hovered[2].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[2].id);
-                }}
-              >
-                <a
-                  href="https://9jablog.netlify.app/"
-                  className="block w-[100%]"
-                  target="_blank"
-                >
-                  <img
-                    src={blog}
-                    alt=""
-                    className="block rounded-t-[20px] rounded-b-[20px] h-[200px]"
-                  />
-
-                  <p
-                    className={`text-[25px] font-karla pl-[10px] py-[10px]`}
-                    style={{
-                      color: hovered[2].isOpen ? selectedColor : "",
-                    }}
-                  >
-                    Blog
-                  </p>
-                </a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div
-                className={`${
-                  hovered[3].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
-                }`}
-                onMouseOver={() => {
-                  handleHover(hovered[3].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[3].id);
-                }}
-              >
-                <a
-                  href="https://solarvillage.netlify.app/"
-                  className="block w-[100%]"
-                  target="_blank"
-                >
-                  <img
-                    src={solar}
-                    alt=""
-                    className="block rounded-t-[20px] rounded-b-[20px] h-[200px]"
-                  />
-
-                  <p
-                    className={`text-[25px] font-karla pl-[10px] py-[10px]`}
-                    style={{
-                      color: hovered[3].isOpen ? selectedColor : "",
-                    }}
-                  >
-                    Solar Works
-                  </p>
-                </a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div
-                className={`${
-                  hovered[4].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
-                }`}
-                onMouseOver={() => {
-                  handleHover(hovered[4].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[4].id);
-                }}
-              >
-                <a
-                  href="https://casinofun.netlify.app/"
-                  className="block w-[100%]"
-                  target="_blank"
-                >
-                  <img
-                    src={casino}
-                    alt=""
-                    className="block rounded-t-[20px] rounded-b-[20px] h-[200px]"
-                  />
-
-                  <p
-                    className={`text-[25px] font-karla pl-[10px] py-[10px]`}
-                    style={{
-                      color: hovered[4].isOpen ? selectedColor : "",
-                    }}
-                  >
-                    Casino
-                  </p>
-                </a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div
-                className={`${
-                  hovered[5].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
-                }`}
-                onMouseOver={() => {
-                  handleHover(hovered[5].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[5].id);
-                }}
-              >
-                <a
-                  href="https://probuilders.netlify.app/"
-                  className="block w-[100%]"
-                  target="_blank"
-                >
-                  <img
-                    src={gym}
-                    alt=""
-                    className="block rounded-t-[20px] rounded-b-[20px] h-[200px]"
-                  />
-
-                  <p
-                    className={`text-[25px] font-karla pl-[10px] py-[10px]`}
-                    style={{
-                      color: hovered[5].isOpen ? selectedColor : "",
-                    }}
-                  >
-                    Gym
-                  </p>
-                </a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div
-                className={`${
-                  hovered[6].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
-                }`}
-                onMouseOver={() => {
-                  handleHover(hovered[6].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[6].id);
-                }}
-              >
-                <a
-                  href="https://anniekitchen.netlify.app/"
-                  className="block w-[100%]"
-                  target="_blank"
-                >
-                  <img
-                    src={fastFood}
-                    alt=""
-                    className="block rounded-t-[20px] rounded-b-[20px] h-[200px]"
-                  />
-
-                  <p
-                    className={`text-[25px] font-karla pl-[10px] py-[10px]`}
-                    style={{
-                      color: hovered[6].isOpen ? selectedColor : "",
-                    }}
-                  >
-                    Veggie
-                  </p>
-                </a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div
-                className={`${
-                  hovered[7].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
-                }`}
-                onMouseOver={() => {
-                  handleHover(hovered[7].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[7].id);
-                }}
-              >
-                <a
-                  href="https://cctvsecurity.netlify.app/"
-                  className="block w-[100%]"
-                  target="_blank"
-                >
-                  <img
-                    src={cam}
-                    alt=""
-                    className="block rounded-t-[20px] rounded-b-[20px] h-[200px]"
-                  />
-
-                  <p
-                    className={`text-[25px] font-karla pl-[10px] py-[10px]`}
-                    style={{
-                      color: hovered[7].isOpen ? selectedColor : "",
-                    }}
-                  >
-                    Safe Cam
-                  </p>
-                </a>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div
-                className={`${
-                  hovered[8].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
-                }`}
-                onMouseOver={() => {
-                  handleHover(hovered[8].id);
-                }}
-                onMouseLeave={() => {
-                  handleMouseLeave(hovered[8].id);
-                }}
-              >
-                <a
-                  href="https://rellyconstruct.netlify.app/"
-                  className="block w-[100%]"
-                  target="_blank"
-                >
-                  <img
-                    src={build}
-                    alt=""
-                    className="block rounded-t-[20px] rounded-b-[20px] h-[200px]"
-                  />
-
-                  <p
-                    className={`text-[25px] font-karla pl-[10px] py-[10px]`}
-                    style={{
-                      color: hovered[8].isOpen ? selectedColor : "",
-                    }}
-                  >
-                    Web Build
-                  </p>
-                </a>
-              </div>
-            </SwiperSlide>
           </Swiper>
-        </div>
-
-        <div
-          className={`${
-            hovered[9].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
-          } w-[95%] max-w-[] mx-auto my-[20px]`}
-          onMouseOver={() => {
-            handleHover(hovered[9].id);
-          }}
-          onMouseLeave={() => {
-            handleMouseLeave(hovered[9].id);
-          }}
-        >
-          <a
-            href="https://hospitalcare.netlify.app/"
-            className="block w-[100%]"
-            target="_blank"
-          >
-            <img
-              src={health}
-              alt=""
-              className="block rounded-t-[20px] rounded-b-[20px] h-[400px]"
-            />
-
-            <p
-              className={`text-[30px] font-karla pl-[10px] py-[10px]`}
-              style={{
-                color: hovered[9].isOpen ? selectedColor : "",
-              }}
-            >
-              Health Care
-            </p>
-          </a>
         </div>
       </div>
     </section>
@@ -448,3 +137,37 @@ const SectionSix: React.FC<TextColorProps> = ({ selectedColor }) => {
 };
 
 export default SectionSix;
+
+
+{/* <div
+  className={`${
+    hovered[0].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
+  } w-[95%] max-w-[] mx-auto my-[20px]`}
+  onMouseOver={() => {
+    handleHover(hovered[0].id);
+  }}
+  onMouseLeave={() => {
+    handleMouseLeave(hovered[0].id);
+  }}
+>
+  <a
+    href="https://petroutine.netlify.app/"
+    className="block w-[100%]"
+    target="_blank"
+  >
+    <img
+      src={pet}
+      alt=""
+      className="block rounded-t-[20px] rounded-b-[20px] h-[400px]"
+    />
+
+    <p
+      className={`text-[30px] font-karla pl-[10px] py-[10px]`}
+      style={{
+        color: hovered[0].isOpen ? selectedColor : "",
+      }}
+    >
+      Pet Store
+    </p>
+  </a>
+</div>; */}
