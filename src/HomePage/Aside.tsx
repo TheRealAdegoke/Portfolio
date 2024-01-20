@@ -1,4 +1,4 @@
-import action from "../assets/action-truman.gif";
+import action from "../assets/HackerImage.png";
 import { useState } from "react";
 import { Link } from "react-scroll";
 
