@@ -84,9 +84,6 @@ const SectionThree: React.FC<TextColorProps> = ({ selectedColor }) => {
                 2022 - Present
               </p>
               <p className="text-[20px] font-[400]">Web Developer</p>
-              <p className="text-[20px] font-[400]">
-                Front-End React Developer
-              </p>
             </div>
           </div>
 

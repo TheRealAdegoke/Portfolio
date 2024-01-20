@@ -101,7 +101,7 @@ const SectionFour: React.FC<TextColorProps> = ({ selectedColor }) => {
             ></i>
           </div>
           <p className="ml-[20px] text-[rgba(255,255,255,0.4)]">
-            I have expertise in HTML, CSS, and JavaScript, and React JS
+            I have expertise in HTML, CSS, and JavaScript, React JS, Node.JS, Express.JS, and MongoDB
           </p>
         </div>
       </div>
