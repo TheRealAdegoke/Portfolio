@@ -6,6 +6,8 @@ interface TextComponentProps {
   selectedColor: string;
 }
 
+const presentYear: number = new Date().getFullYear();
+
 const Aside: React.FC<TextComponentProps> = ({ selectedColor }) => {
 const [hovered, setHovered] = useState<any>([
   { id: 1, isOpen: false },
@@ -58,7 +60,7 @@ const handleMouseLeave = (id: any) => {
           </div>
 
           <div>
-            <p className="large:text-[15px]">Front-End Developer</p>
+            <p className="large:text-[15px]">Web Developer</p>
           </div>
         </div>
 
@@ -81,7 +83,7 @@ const handleMouseLeave = (id: any) => {
 
         <div className="text-center mb-[20px]">
           <p className="text-[rgba(255,255,255,0.4)] text-[17px] capitalize">
-            &copy; <span>2023</span> Adewale portfolio
+            &copy; <span>{presentYear}</span> Adewale portfolio
           </p>
         </div>
 

@@ -35,7 +35,7 @@ const SectionOne: React.FC<TextColorProps> = ({ selectedColor }) => {
         >
           Adewale
         </span>
-        , A Front-End Developer
+        , A Web Developer
       </p>
 
       <p
