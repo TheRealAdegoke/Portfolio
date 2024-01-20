@@ -90,7 +90,7 @@ const handleMouseLeave = (id: any) => {
         <div className="flex justify-center gap-[20px] my-[40px]">
           <a href="https://twitter.com/TheRealAdegoke" target="_blank">
             <i
-              className={`fa-brands fa-twitter border-[1px] border-[rgba(255,255,255,0.3)] rounded-full px-[15px] py-[15px] text-[rgba(255,255,255,0.5)] text-[20px] cursor-pointer hover:border-[rgb(40,233,140)] hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out`}
+              className={`fa-brands fa-x-twitter border-[1px] border-[rgba(255,255,255,0.3)] rounded-full px-[15px] py-[15px] text-[rgba(255,255,255,0.5)] text-[20px] cursor-pointer hover:border-[rgb(40,233,140)] hover:text-[rgb(40,233,140)] transition-all duration-[0.5s] ease-in-out`}
               style={{
                 borderColor: hovered[0].isOpen
                   ? selectedColor
