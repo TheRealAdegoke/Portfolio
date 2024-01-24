@@ -83,7 +83,20 @@ const SectionThree: React.FC<TextColorProps> = ({ selectedColor }) => {
               >
                 2022 - Present
               </p>
-              <p className="text-[20px] font-[400]">Web Developer</p>
+              <a
+                href="https://drive.google.com/file/d/1s-rbMjJthSP5vJXzyPj-xMXMNnOHsXQj/view?usp=drive_link" target="_blank"
+                className="flex flex-col cursor-pointer"
+              >
+                <p className="text-[20px] font-[400]">Web Developer</p>
+                <div
+                  className={`flex items-center justify-center gap-[10px] rounded-full border-[1px] border-[rgba(255,255,255,0.4)] text-[rgba(255,255,255,0.8)] w-[180px] mt-[20px]`}
+                >
+                  <i className="fa-solid fa-arrow-down text-[13px]"></i>
+                  <p className="py-[5px] uppercase font-karla">
+                    Download Resume
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
 
