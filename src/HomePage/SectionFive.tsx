@@ -1,5 +1,4 @@
 import { useState } from "react";
-import typescript from "../assets/typescript.png"
 import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
