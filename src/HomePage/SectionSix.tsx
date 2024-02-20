@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CoinVault from "../assets/CoinVault.png";
+import WriteCap from "../assets/writecap.png";
 
 
 
@@ -73,7 +74,7 @@ const SectionSix: React.FC<TextColorProps> = ({ selectedColor }) => {
             slidesPerView={1}
             spaceBetween={40}
             autoplay={{
-              delay: 1500,
+              delay: 2000,
               disableOnInteraction: false,
             }}
             pagination={{
@@ -82,6 +83,43 @@ const SectionSix: React.FC<TextColorProps> = ({ selectedColor }) => {
             modules={[Autoplay]}
             className="mySwiper"
           >
+            <SwiperSlide>
+              <div
+                className={`${
+                  hovered[0].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
+                }`}
+                onMouseOver={() => {
+                  handleHover(hovered[0].id);
+                }}
+                onMouseLeave={() => {
+                  handleMouseLeave(hovered[0].id);
+                }}
+              >
+                <a
+                  href="https://writecap.co/"
+                  className="block w-[100%]"
+                  target="_blank"
+                >
+                  <img
+                    src={WriteCap}
+                    alt=""
+                    className="block rounded-[8px] w-[100%]"
+                  />
+
+                  <div>
+                    <p
+                      className={`text-[25px] font-[600] font-karla pl-[10px] py-[10px]`}
+                      style={{
+                        color: hovered[0].isOpen ? selectedColor : "",
+                      }}
+                    >
+                      WriteCap
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </SwiperSlide>
+
             <SwiperSlide>
               <div
                 className={`${
