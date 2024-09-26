@@ -3,6 +3,7 @@ import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
 import react from "../assets/react.png";
+import next from "../assets/nextjs.png";
 import tailwind from "../assets/tailwind.webp";
 import mongo from "../assets/mongodb.png";
 import node from "../assets/Node.png";
@@ -21,6 +22,7 @@ const SectionFive: React.FC<TextColorProps> = ({ selectedColor }) => {
     { id: 5, isOpen: false },
     { id: 6, isOpen: false },
     { id: 7, isOpen: false },
+    { id: 8, isOpen: false },
   ]);
 
   const handleHover = (id: any) => {
@@ -177,10 +179,10 @@ const SectionFive: React.FC<TextColorProps> = ({ selectedColor }) => {
               borderColor: hovered[4].isOpen ? selectedColor : "",
             }}
           >
-            <img src={tailwind} alt="" className="w-[80px]" />
+            <img src={next} alt="" className="w-[100px]" />
           </div>
 
-          <p className="font-[poppins] uppercase py-[20px]">Tailwind</p>
+          <p className="font-[poppins] uppercase py-[20px]">Next</p>
         </div>
 
         <div
@@ -200,10 +202,10 @@ const SectionFive: React.FC<TextColorProps> = ({ selectedColor }) => {
               borderColor: hovered[5].isOpen ? selectedColor : "",
             }}
           >
-            <img src={mongo} alt="" className="w-[80px]" />
+            <img src={tailwind} alt="" className="w-[80px]" />
           </div>
 
-          <p className="font-[poppins] uppercase py-[20px]">MongoDB</p>
+          <p className="font-[poppins] uppercase py-[20px]">Tailwind</p>
         </div>
 
         <div
@@ -221,6 +223,29 @@ const SectionFive: React.FC<TextColorProps> = ({ selectedColor }) => {
             } flex flex-col items-center border-[1px] rounded-t-[50px] rounded-b-[50px] py-[80px] w-[100%] h-[250px]`}
             style={{
               borderColor: hovered[6].isOpen ? selectedColor : "",
+            }}
+          >
+            <img src={mongo} alt="" className="w-[80px]" />
+          </div>
+
+          <p className="font-[poppins] uppercase py-[20px]">MongoDB</p>
+        </div>
+
+        <div
+          className="flex flex-col items-center w-[45%] max-w-[200px] large:w-[25%]"
+          onMouseOver={() => {
+            handleHover(hovered[7].id);
+          }}
+          onMouseLeave={() => {
+            handleMouseLeave(hovered[7].id);
+          }}
+        >
+          <div
+            className={`${
+              hovered[7].isOpen ? "hover:border-[rgb(40,233,140)]" : ""
+            } flex flex-col items-center border-[1px] rounded-t-[50px] rounded-b-[50px] py-[80px] w-[100%] h-[250px]`}
+            style={{
+              borderColor: hovered[7].isOpen ? selectedColor : "",
             }}
           >
             <img src={node} alt="" className="w-[80px]" />
