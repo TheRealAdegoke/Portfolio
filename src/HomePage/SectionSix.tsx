@@ -2,7 +2,8 @@ import { useState } from "react";
 import CoinVault from "../assets/CoinVault.png";
 import WriteCap from "../assets/writecap.png";
 import QuickUI from "../assets/QuickUI.png";
-
+import Artlify from "../assets/Artlify.png";
+import LakeSideCut from "../assets/LakeSideCut.png";
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -115,6 +116,80 @@ const SectionSix: React.FC<TextColorProps> = ({ selectedColor }) => {
                       }}
                     >
                       QuickUI
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div
+                className={`${
+                  hovered[0].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
+                }`}
+                onMouseOver={() => {
+                  handleHover(hovered[0].id);
+                }}
+                onMouseLeave={() => {
+                  handleMouseLeave(hovered[0].id);
+                }}
+              >
+                <a
+                  href="https://artlifyagency.com/"
+                  className="block w-[100%]"
+                  target="_blank"
+                >
+                  <img
+                    src={Artlify}
+                    alt="Artlify website image"
+                    className="block rounded-[8px] w-[100%]"
+                  />
+
+                  <div>
+                    <p
+                      className={`text-[25px] font-[600] font-karla pl-[10px] py-[10px]`}
+                      style={{
+                        color: hovered[0].isOpen ? selectedColor : "",
+                      }}
+                    >
+                      Artlify
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div
+                className={`${
+                  hovered[0].isOpen ? "hover:text-[rgb(40,233,140)]" : ""
+                }`}
+                onMouseOver={() => {
+                  handleHover(hovered[0].id);
+                }}
+                onMouseLeave={() => {
+                  handleMouseLeave(hovered[0].id);
+                }}
+              >
+                <a
+                  href="https://lakesidecut.shop"
+                  className="block w-[100%]"
+                  target="_blank"
+                >
+                  <img
+                    src={LakeSideCut}
+                    alt="LakeSideCut website image"
+                    className="block rounded-[8px] w-[100%]"
+                  />
+
+                  <div>
+                    <p
+                      className={`text-[25px] font-[600] font-karla pl-[10px] py-[10px]`}
+                      style={{
+                        color: hovered[0].isOpen ? selectedColor : "",
+                      }}
+                    >
+                      LakeSideCut
                     </p>
                   </div>
                 </a>
