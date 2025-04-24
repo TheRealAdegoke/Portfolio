@@ -98,7 +98,7 @@ const SectionSix: React.FC<TextColorProps> = ({ selectedColor }) => {
                 }}
               >
                 <a
-                  href="https://quickui.co/"
+                  href="https://quick-ui-three.vercel.app/"
                   className="block w-[100%]"
                   target="_blank"
                 >
